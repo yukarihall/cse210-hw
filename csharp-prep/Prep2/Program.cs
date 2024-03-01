@@ -32,13 +32,14 @@ class Program
         }
 
         Console.WriteLine($"Your grade is: {letter}");
-    }
-    if (percent >= 70)
-        {
-            Console.WriteLine("You passed!");
-        }
+        if (percent >= 70)
+            {
+                Console.WriteLine("You passed!");
+            }
         else
-        {
-            Console.WriteLine("Better luck next time!");
-        }
+            {
+                Console.WriteLine("Better luck next time!");
+            }
+    }
+    
 }
