@@ -5,6 +5,7 @@ public class Fraction
     private int _top;
     private int _bottom;
 
+    //fractions
     public Fraction()
     {
         // Default to 1/1

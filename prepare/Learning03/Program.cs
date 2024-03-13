@@ -1,5 +1,6 @@
 using System;
 
+//program for fractions
 class Program
 {
     static void Main(string[] args)
