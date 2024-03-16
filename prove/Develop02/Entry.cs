@@ -8,11 +8,10 @@ public class Entry
  public void Write()
  {
     _date = DateTime.Now.ToShortDateString();
-    // _promptText should be here
     _promptText = pgen.GetRandomPrompt();
-    // _entryText should be here
     Console.WriteLine(_promptText);
-    _entryText = Console.ReadLine;
+    _entryText = Console.ReadLine();
+
  }
  
  public void Display()

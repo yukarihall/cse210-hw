@@ -1,13 +1,18 @@
+//using System.IO;
+
 public class Journal
 {
-  public List<Entry> _entries;
+  public List<Entry> _entries = new List<Entry>();
+  public string filename;
+
   
-  public void AddEntry(Entry newEntry)
+  public void AddEntry()
   {
     //adding a new journal entry to a list Entry
     Entry entry = new Entry();
-    entry.Write()
+    entry.Write();
     _entries.Add(entry); 
+
   }
 
   public void DisplayAll()
@@ -20,15 +25,16 @@ public class Journal
   
   public void SaveToFile()
   {
-    //Getting the file name here.
-    Console.WriteLine("What is the file name to save?: ");
+    //Getting the file name here. 
+    Console.WriteLine("What is the file name (???.txt) to save?: ");
     filename = Console.ReadLine();
 
     using (StreamWriter outputFile = new StreamWriter(filename))
     {
       foreach(Entry entry in _entries)
-      {
-        outputFile.WriteLine($"{entry}");    
+      {          
+        outputFile.WriteLine($"{entry._date},{entry._promptText},{entry._entryText}");
+        Console.WriteLine($"{entry._date},{entry._promptText},{entry._entryText}");       
       }
     }
   }
@@ -44,8 +50,13 @@ public class Journal
     foreach (string line in lines)
     {
         string[] parts = line.Split(",");
-        string firstName = parts[0];
-        string lastName = parts[1];
+        string _date = parts[0];
+        string _promptText = parts[1];
+        string _entryText = parts[2];
+
+        //for debag
+        Console.WriteLine($"{_date}:{_promptText}:{_entryText}");
+        
     }
   }
 }
