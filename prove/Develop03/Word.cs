@@ -1,14 +1,30 @@
-using System;
-
-class Program
+class Words
 {
-  _text:string
-  _isHidden:bool
+  public string _text;
+  public bool _isHidden;
+  
+  Word(_text)
+  {
 
-  Word(_text:string)
+  }
+  
+  // randomly hide the words
+  Hide()
+  {
 
-  Hide():void
-  Show():void
-  IsHidden():bool
-  GetDisplayText():string
+  }
+  Show()
+  {
+
+  }
+  IsHidden()
+  {
+
+  }
+ 
+  GetDisplayText()
+  {
+
+  }
+  
 }
