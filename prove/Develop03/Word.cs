@@ -1,30 +1,40 @@
-class Words
+class Word
 {
-  public string _text;
+  public string _text; 
   public bool _isHidden;
   
-  Word(_text)
+  public Word(string text)
   {
+      _text = text;
 
+      _isHidden = false;
+  }  
+
+  public void Hide()
+  {
+    _isHidden = true;
   }
-  
-  // randomly hide the words
-  Hide()
-  {
 
+  public void Show()
+  {
+    _isHidden = false;
   }
-  Show()
-  {
 
-  }
-  IsHidden()
+  public bool IsHidden()
   {
-
+    return _isHidden;
   }
  
-  GetDisplayText()
-  {
-
+  public string GetDisplayText()
+  { 
+    // if the word is hidden return __, otherwise return text
+    if (_isHidden == false) return _text;
+    string underScoreString = "";
+    for(int lCount=0; lCount<_text.Length ; lCount++){
+      underScoreString += "_";      
+    }
+    
+      return underScoreString;
   }
   
 }

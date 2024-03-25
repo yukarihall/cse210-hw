@@ -1,12 +1,27 @@
 class Reference
 {
   // set the verses of the scriptures  
-  public string _book;
-  public int _chapter;
-  public int _verse;
-  public int _endVerse;
+  public string _book;  // Matthew
+  public int _chapter;  // 7
+  public int _verse;    // 7
+  public int _endVerse; // 10
   
-  Reference(book:string,chapter:int,verse:int)
-  Reference(book:string,chapter:int,startVerse:int,endVerse:int)
-  GetDisplayText():string
+  public Reference(string book,int chapter,int verse)
+  {
+      _book = book;
+      _chapter = chapter;
+      _verse = verse;
+  }
+  public Reference(string book,int chapter,int startVerse,int endVerse)
+  {
+      _book = book;
+      _chapter = chapter;
+      _verse = startVerse;
+      _endVerse = endVerse;
+  }
+  public string GetDisplayText()
+  {
+      // eg return $"{_endVerse} {_verse} {_book} {_chapter}"
+      return $"{_book} {_chapter} {_verse} {_endVerse}";    
+  }
 }

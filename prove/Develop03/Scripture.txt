@@ -7,6 +7,8 @@ HideRandomWords(numberToHide:int):void
 GetDisplayText():string
 IsCompetelyHidden():bool
 
+
+
 Word.cs
 _text:string
 _isHidden:bool
@@ -18,6 +20,8 @@ Show():void
 IsHidden():bool
 GetDisplayText():string
 
+
+
 Reference.cs
 _book:string
 _chapter:int
@@ -27,3 +31,28 @@ _endVerse:int
 Reference(book:string,chapter:int,verse:int)
 Reference(book:string,chapter:int,startVerse:int,endVerse:int)
 GetDisplayText():string
+
+
+// randomly hide the words
+    public Random RandomWords = new Random();
+
+    public List<string> _HideWords = new List<string>()
+    {
+      "1Nephi 3-7 And it came to pass that I, Nephi, said unto my father: I will go and do the things which the Lord hath commanded, for I know that the Lord giveth no bcommandments unto the children of men, save he shall cprepare a way for them that they may accomplish the thing which he commandeth them.",
+
+      "Moroni 7-12 Wherefore, all things which are agood cometh of God; and that which is bevil cometh of the devil; for the devil is an enemy unto God, and fighteth against him continually, and inviteth and enticeth to csin, and to do that which is evil continually.",
+
+      "Moroni 10-32 Yea, acome unto Christ, and be bperfected in him, and cdeny yourselves of all ungodliness; and if ye shall deny yourselves of all ungodliness, and dlove God with all your might, mind and strength, then is his grace sufficient for you, that by his grace ye may be eperfect in Christ; and if by the grace of God ye are perfect in Christ, ye can in nowise deny the power of God."
+   };
+
+      // This will start by displaying "AAA" and waiting for the   user to press the enter key
+      Console.WriteLine("AAA");
+      Console.ReadLine();
+
+      // This will clear the console
+      Console.Clear();
+
+      // This will show "BBB" in the console where "AAA" used to be
+      Console.WriteLine("BBB");
+   
+   
