@@ -1,0 +1,19 @@
+Polymorphism Program
+
+Class: Activity
+- Date: DateTime
+- LengthInMinutes: int
+
++ virtual GetDistance(): double
++ virtual GetSpeed(): double
++ virtual GetPace(): double
++ GetSummary(): string
+
+Class: Running : Activity
+- Distance: double
+
+Class: Cycling : Activity
+- Speed: double
+
+Class: Swimming : Activity
+- Laps: int

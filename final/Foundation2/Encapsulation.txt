@@ -1,0 +1,30 @@
+Encapsulation Program
+
+Class: Order
+- Products: List<Product>
+- Customer: Customer
+
++ CalculateTotalCost(): decimal
++ GetPackingLabel(): string
++ GetShippingLabel(): string
+
+Class: Product
+- Name: string
+- ProductId: int
+- Price: decimal
+- Quantity: int
+
+Class: Customer
+- Name: string
+- Address: Address
+
++ IsInUSA(): bool
+
+Class: Address
+- StreetAddress: string
+- City: string
+- StateOrProvince: string
+- Country: string
+
++ IsInUSA(): bool
++ GetFullAddress(): string

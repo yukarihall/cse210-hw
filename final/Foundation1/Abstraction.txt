@@ -1,0 +1,23 @@
+Abstraction Program
+
+Class: Video
+- Title: string
+- Author: string
+- LengthInSeconds: int
+- comments: List<Comment>
+
++ AddComment(commenterName: string, commentText: string): void
++ GetNumberOfComments(): int
++ GetComments(): List<Comment>
+
+Class: Comment
+- CommenterName: string
+- CommentText: string
+
+Main Method:
+- Create 3-4 videos
+- Add 3-4 comments to each video
+- Store videos in a list
+- Iterate through the list of videos
+    - Display title, author, length, number of comments
+    - Display all comments for each video

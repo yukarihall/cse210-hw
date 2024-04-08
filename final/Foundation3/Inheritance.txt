@@ -1,0 +1,30 @@
+Inheritance Program
+
+Class: Event
+- EventTitle: string
+- Description: string
+- Date: DateTime
+- Time: TimeSpan
+- Address: Address
+
++ GetStandardDetails(): string
++ GetFullDetails(): virtual string
++ GetShortDescription(): string
+
+Class: Lecture : Event
+- Speaker: string
+- Capacity: int
+
+Class: Reception : Event
+- RSVPEmail: string
+
+Class: OutdoorGathering : Event
+- WeatherForecast: string
+
+Class: Address
+- Street: string
+- City: string
+- State: string
+- Country: string
+
++ GetFullAddress(): string
