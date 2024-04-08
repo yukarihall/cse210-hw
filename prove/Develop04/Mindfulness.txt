@@ -1,0 +1,44 @@
+Class Activity
+_name:string
+_description:string
+_duration:int
+
+Activity()
+DisplayStatingMessage():void
+DisplayEndingMessage():void
+ShowSpinner(seconds:int):void
+ShowCountDown(secons:int):void
+
+
+
+Class BreathingActivity
+BreathingActivity()
+Run():void
+
+
+
+Class ListingActivity
+_count:int
+_prompts:List<string>
+
+ListingActivity()
+Run():void
+GetRundomPrompt():void
+GetListFormUser():List<string>
+
+
+
+Class ReflectingActivity
+_prompts:List<string>
+_questions:List<string>
+
+ReflectingActivity()
+Run():void
+GetRundomPrompt():string
+GetRundomQuestion():string
+DisplayPrompt():void
+DisplayQuestion():void
+
+
+
+
