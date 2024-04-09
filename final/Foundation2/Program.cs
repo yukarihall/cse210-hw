@@ -9,13 +9,13 @@ class Program
         Address address2 = new Address("456 Elm St", "City2", "State2", "Canada");
 
         // Create customers
-        Customer customer1 = new Customer("Customer 1", address1);
-        Customer customer2 = new Customer("Customer 2", address2);
+        Customer customer1 = new Customer("Customer 1: Tom Cruise", address1);
+        Customer customer2 = new Customer("Customer 2: Lisa Perry", address2);
 
         // Create products
-        Product product1 = new Product("Product 1", 1, 10.5m, 2);
-        Product product2 = new Product("Product 2", 2, 15.75m, 3);
-        Product product3 = new Product("Product 3", 3, 5.0m, 1);
+        Product product1 = new Product("Product 1: Cup Holder", 1, 10.5m, 2);
+        Product product2 = new Product("Product 2: Desk", 2, 15.75m, 3);
+        Product product3 = new Product("Product 3: Beddings", 3, 5.0m, 1);
 
         // Create orders
         Order order1 = new Order(customer1);
