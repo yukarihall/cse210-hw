@@ -1,23 +1,14 @@
+// Derived class for eternal goals
+class EternalGoal : Goal
+{
+    public EternalGoal(string shortName, string description, int points) 
+        : base(shortName, description, points)
+    {
+    }
 
-class EternalGoal()
-{
-  bool _IsComplete;
-  
-}
-
-public EternalGoal(name, discription, points)
-{
-  
-}
-public void RecordEvent()
-{
-  
-}
-public bool IsComplete()
-{
-  
-}
-public string GetStringRepresentation()
-{
-  
+    // Override RecordEvent method
+    public override void RecordEvent()
+    {
+        base.RecordEvent();
+    }
 }

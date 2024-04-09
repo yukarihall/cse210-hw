@@ -1,22 +1,30 @@
-class SimpleGoal()
+// Derived class for simple goals
+class SimpleGoal : Goal
 {
-  bool _IsComplete;
+    private bool _isComplete;
 
-}
+    public SimpleGoal(string shortName, string description, int points) 
+        : base(shortName, description, points)
+    {
+        _isComplete = false;
+    }
 
-public SimpleGoal(name, discription, points)
-{
+    // Override RecordEvent method
+    public override void RecordEvent()
+    {
+        _isComplete = true;
+        base.RecordEvent();
+    }
 
-}
-public void RecordEvent()
-{
+    // Override IsComplete method
+    public override bool IsComplete()
+    {
+        return _isComplete;
+    }
 
-}
-public bool IsComplete()
-{
-  
-}
-public string GetStringRepresentation()
-{
-  
+    // Override GetStringRepresentation method
+    public override string GetStringRepresentation()
+    {
+        return _isComplete ? $"{_shortName} [X]" : $"{_shortName} [ ]";
+    }
 }
